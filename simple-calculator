@@ -1,0 +1,17 @@
+io.write("\n Welcome to simple Calculator program \n")
+io.write("Enter 1 for + \n Enter 2 for - \n Enter 3 for * \n ENTER 4 FOR / \n")
+value=io.read()
+print("Enter 2 variables value")
+a=io.read()
+b=io.read()
+if value=='1'
+then
+io.write("Sum of two numbers is ",a+b,"/n ")
+elseif value=='2'
+then io.write("Difference  Of two number is ",a-b,"\n")
+elseif value=='3'
+then io.write("Product  Of two number is ",a*b,"\n")
+elseif value=='4'
+then io.write("Divident  Of two number is ",a/b,"\n")
+end
+

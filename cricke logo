@@ -1,0 +1,23 @@
+lyr=active.proxy.layerByName("0")
+d=active.document()
+b=Builder(d)
+
+for i=100,120,15 do
+c1=Circle(Coord(0,0),i,lyr)
+b:append(c1)
+end
+
+stump1=Line(Coord(50,88),Coord(55,-50),lyr)
+
+stump2=Line(Coord(00,100),Coord(-5,-43),lyr)
+
+stump3=Line(Coord(-50,88),Coord(-55,-43),lyr)
+
+ball=Circle(Coord(-26,-75),17,lyr)
+
+bale1=Line(Coord(-56,-44),Coord(-5,-60),lyr)
+
+bale2=Line(Coord(-2,-46),Coord(50,-65),lyr)
+
+b:append(stump1):append(stump2):append(stump3):append(ball):append(bale1):append(bale2):execute()
+

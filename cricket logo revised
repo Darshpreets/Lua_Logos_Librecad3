@@ -1,0 +1,42 @@
+lyr=active.proxy.layerByName("0")
+d=active.document()
+b=Builder(d)
+
+--outer layer
+for i=0,20,1 do
+c1=Circle(Coord(0,0),150+i,lyr)
+b:append(c1)
+end
+
+--Stumps
+for i=0,10,1 do
+stump1=Line(Coord(55+i/2,140),Coord(60+i,-50),lyr)
+b:append(stump1)
+
+stump2=Line(Coord(00+i/2,150),Coord(-5+i,-43),lyr)
+b:append(stump2)
+
+stump3=Line(Coord(-55+i/2,140),Coord(-60+i,-50),lyr)
+b:append(stump3)
+
+ -- Bales
+bale1=Line(Coord(-55,-50+i),Coord(-5,-70+i),lyr)
+b:append(bale1)
+bale2=Line(Coord(-2,-46+i),Coord(65,-76+i),lyr)
+b:append(bale2)
+
+end
+
+--Ball
+for i=0,3,1 do
+ball=Circle(Coord(-45,-100),20-i,lyr)
+b:append(ball)
+end
+
+--Ball grip
+grip1=Line(Coord(-60,-110),Coord(-34,-88),lyr)
+
+grip2=Line(Coord(-57,-112),Coord(-31,-90),lyr)
+
+b:append(grip1):append(grip2):execute()
+

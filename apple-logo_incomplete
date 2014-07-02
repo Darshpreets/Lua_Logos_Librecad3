@@ -1,0 +1,14 @@
+layer=active.proxy.layerByName("0")
+d=active.document()
+apple=Builder(d)
+
+function gol(a,b,r,angle1,angle2)
+
+l=Arc(Coord(a,b),r,math.rad(angle2),math.rad(angle2),layer)
+apple:append(l):execute()
+end
+
+
+gol(0,0,130,80,110)
+gol(0,0,130,260,280)
+
